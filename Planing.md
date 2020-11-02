@@ -20,6 +20,8 @@ Usp (Unique selling points)
     - text-to-speech - api
 brain storming!!
 
+Letta efter bra exempel på anteknings appar
+
 --------------------------
 #Onsdag (11-4):#
 
@@ -47,3 +49,9 @@ Småändringar/finslipa
 Klar app
 
 --------------------------
+
+
+#Desigen#
+
+    Startpage
+    
