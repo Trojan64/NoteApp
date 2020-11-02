@@ -12,4 +12,9 @@
     - postit liknande (se ut som en postit lapp)
     - skriva ut/ spara datum då document skapades
     - fokus på ux (user experience)
-    - 
+
+Fokus: 
+    - Header med "?"/hjälp knapp
+    - Skicka notifikationer till mobilen som påmminer äldre att skriva 
+    - Responsive, ändra storlek 
+    - Koppla till kalendern 

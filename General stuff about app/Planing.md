@@ -1,44 +1,44 @@
 Planering for våran Anteknings app
 
 --------------------------
-#Mondag (11-2):#
+#Måndag (2(11):#
     Planera-hur appen ska vara.
     user stories
     wireframe
     mood board
-    Usp (Unique selling points)
-        idés under "idés for usp"
+    USP (Unique selling points)
+        ideas in "USP idéer"
     
     brain storming!!
 
     Letta efter bra exempel på anteknings appar
 
 --------------------------
-#Onsdag (11-4):#
+#Onsdag (4/11):#
     Välj vilken api. Airtable?
 
 --------------------------
-#Fredag (11-6):#
+#Fredag (6/11):#
     Happy path legga till antekningar
 
 --------------------------
-#Mondag (11-9):#
+#Måndag (9/11):#
 
 --------------------------
-#Onsdag (11-11):#
+#Onsdag (11/11):#
 
 --------------------------
-#Fredag (11-13):#
+#Fredag (13/11):#
 
 --------------------------
-#Mondag (11-16):#
+#Måndag (16/11):#
 
 --------------------------
-#Onsdag (11-18):#
+#Onsdag 18/(11):#
     Små ändringar/ finslipa
 
 --------------------------
-#Fredag (11-20):#
+#Fredag (20/11):#
     Klar app
 
 --------------------------
