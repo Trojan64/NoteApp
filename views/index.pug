@@ -9,11 +9,13 @@ block content
       textarea(name="note", id="text", cols="22", rows="10", form="newForm", placeholder="Write your note here...").form-control
       br
       br
-      input(type="submit", onclick="addNote()").btn
+      input(type="submit", value="Add Note" onclick="addNote()").btn
       br
       br
-      input(type="submit", value="Close form", onclick="closeForm()").btn
+      input(type="submit", value="Close Form", onclick="closeForm()").btn
     br
+    div(id="addForm")
+      input(type="submit", value="Add note", onclick="openForm()").btn
     div(id="notes").parent
       div
         input(id="buttonAdd", type="submit", value="Add new note", onclick="openForm()").btn
