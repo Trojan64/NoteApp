@@ -5,11 +5,11 @@ block content
   #container
     div 
       h3 add
-    form(action="/javascripts/add.js" id="newNote")
+    div(action="/javascripts/add.js" id="newNote")
       input(type="text", id="title", name="title", placeholder="title", onfocus="this.value=''").form-control
       br
       br
-      textarea(name="note", cols="22", rows="10", form="newForm", placeholder="note", onfocus="this.value=''").form-control
+      textarea(name="note", id="text", cols="22", rows="10", form="newForm", placeholder="note", onfocus="this.value=''").form-control
       br
       br
-      input(type="submit", value="Submit").btn.btn-danger
+      input(type="submit", onclick="addNote()").btn.btn-danger
