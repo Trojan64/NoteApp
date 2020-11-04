@@ -5,15 +5,15 @@ block content
   #container
     div( id="newNote")
       h3 add
-      input(type="text", id="title", name="title", placeholder="title").form-control
+      input(id="title", type="text",  name="title", placeholder="title").form-control
       br
       br
-      textarea(name="note", id="text", cols="22", rows="10", form="newForm", placeholder="note").form-control
+      textarea(id="text", name="note", cols="22", rows="10", form="newForm", placeholder="note").form-control
       br
       br
       input(type="submit", onclick="addNote()").btn.btn-danger
       br
       br
       input(type="submit", value="Close form", onclick="closeForm()")
-    div(id="addForm")
-      input(type="submit", value="+", onclick="openForm()")
+    
+    input(id="addForm" type="submit", value="+", onclick="openForm()")
