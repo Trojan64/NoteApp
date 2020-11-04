@@ -1,8 +1,25 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #EEEEEB;
+  color: #2A2B2D;
 }
 
+nav {
+  background-color: #EEEEEB;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+}
+
+.parent > div {
+  background-color: #EEEEEB;
+}
 a {
   color: #00B7FF;
 }
