@@ -3,9 +3,8 @@ extends layout
 block content
   h1= title
   #container
-    div 
+    div( id="newNote")
       h3 add
-    div(action="/javascripts/add.js" id="newNote")
       input(type="text", id="title", name="title", placeholder="title").form-control
       br
       br
@@ -13,3 +12,5 @@ block content
       br
       br
       input(type="submit", onclick="addNote()").btn.btn-danger
+    div(id="")
+      input(type="submit", value="Add new note", onclick="openForm()")

@@ -1,4 +1,6 @@
 console.log("Hej");
+closeForm();
+
 var JSONString = {
     "name":"Brittas bullar",
     "text":" brittas bullrecept för goda bullar"
