@@ -53,4 +53,7 @@ function loadSpecificNote(id) {
     var element = document.getElementById("readNote");
     element.appendChild(Title);
     element.appendChild(Note);
+    //hide the other divs
+    document.getElementById("notes").style.display = "none";
+    document.getElementById("addForm").style.display = "none";
 }
