@@ -6,4 +6,6 @@ function addNote() {
         "text": text
     };
     JSONArray.push(JSONString);
+    closeForm();
+    loadNotes();
 }

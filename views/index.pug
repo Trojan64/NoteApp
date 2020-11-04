@@ -3,6 +3,7 @@ extends layout
 block content
   #container
     div( id="newNote")
+      br
       input(type="text", id="title", name="title", placeholder="Note name").form-control
       br
       br
@@ -17,10 +18,4 @@ block content
     div(id="addForm")
       input(type="submit", value="Add note", onclick="openForm()").btn
     div(id="notes").parent
-      div
-        input(id="buttonAdd", type="submit", value="Add new note", onclick="openForm()").btn
-      //test divs below, makes sure that every gridbox gets the correct position
-      div
-        p.NoteHead Note name
-        p.NotePreview Note preview text
-      div some text 
+      

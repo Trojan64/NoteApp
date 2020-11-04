@@ -11,6 +11,7 @@ JSONArray.push(JSONString);
 function openForm() {
     document.getElementById("newNote").style.display = "block";
     document.getElementById("addForm").style.display = "none";
+    document.getElementById("notes").innerHTML = "";
 }
   
 function closeForm() {
