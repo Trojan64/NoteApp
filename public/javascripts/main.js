@@ -19,17 +19,20 @@ function closeForm() {
 }
 
 function loadNotes(){
-    var div = document.createElement("div");
-    var header = document.createElement("h3");
-    var node = document.createTextNode("this is a test ( ͡° ͜ʖ ͡°)");
-    header.appendChild(node);
-    //p tag
-    var p = document.createElement("p");
-    var pNode = document.createTextNode("This is insider test");
-    p.appendChild(pNode);
-    //lägg in i diven
-    div.appendChild(header);
-    div.appendChild(p);
-    var element = document.getElementById("notes");
-    element.appendChild(div);
+    document.getElementById("notes").innerHTML = "";
+    for (var i = 0; i < JSONArray.length; i++) {
+        var div = document.createElement("div");
+        var header = document.createElement("h3");
+        var node = document.createTextNode(JSONArray[i].name);
+        header.appendChild(node);
+        //p tag
+        var p = document.createElement("p");
+        var pNode = document.createTextNode(JSONArray[i].text);
+        p.appendChild(pNode);
+        //lägg in i diven
+        div.appendChild(header);
+        div.appendChild(p);
+        var element = document.getElementById("notes");
+        element.appendChild(div);
+    }
 }
