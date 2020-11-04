@@ -32,7 +32,12 @@ function loadNotes(){
         //lägg in i diven
         div.appendChild(header);
         div.appendChild(p);
+        div.setAttribute("onclick", "loadSpecificNote(" + i + ")");
         var element = document.getElementById("notes");
         element.appendChild(div);
     }
+}
+
+function loadSpecificNote(id) {
+    console.log("Load note: " + id);
 }
