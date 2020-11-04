@@ -3,15 +3,20 @@ extends layout
 block content
   #container
     div( id="newNote")
-      input(type="text", id="title", name="Note name", placeholder="title").form-control
+      input(type="text", id="title", name="title", placeholder="Note name").form-control
       br
       br
-      textarea(name="note", id="text", cols="22", rows="10", form="newForm", placeholder="note").form-control
+      textarea(name="note", id="text", cols="22", rows="10", form="newForm", placeholder="Write your note here...").form-control
       br
       br
-      input(type="submit", onclick="addNote()").btn.btn-danger
+      input(type="submit", onclick="addNote()").btn
       br
       br
-      input(type="submit", value="Close form", onclick="closeForm()")
-    div(id="addForm")
-      input(type="submit", value="+", onclick="openForm()")
+      input(type="submit", value="Close form", onclick="closeForm()").btn
+    br
+    div(id="").parent
+      div
+        input(type="submit", value="Add new note", onclick="openForm()").btn
+      //test divs below, makes sure that every gridbox gets the correct position
+      div some text 
+      div some text 
