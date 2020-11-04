@@ -11,7 +11,7 @@ JSONArray.push(JSONString);
 function openForm() {
     document.getElementById("newNote").style.display = "block";
     document.getElementById("addForm").style.display = "none";
-  }
+}
   
 function closeForm() {
     document.getElementById("newNote").style.display = "none";
@@ -20,8 +20,8 @@ function closeForm() {
 
 function loadNotes(){
     var div = document.createElement("div");
-    var header = document.createElement("h4");
-    var node = document.createTextNode("this is a test");
+    var header = document.createElement("h3");
+    var node = document.createTextNode("this is a test ( ͡° ͜ʖ ͡°)");
     header.appendChild(node);
     //p tag
     var p = document.createElement("p");
