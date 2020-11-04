@@ -1,13 +1,12 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
 closeForm();
-
 var JSONString = {
     "name":"Brittas bullar",
     "text":" brittas bullrecept för goda bullar"
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
-
+loadNotes();
 function openForm() {
     document.getElementById("newNote").style.display = "block";
     document.getElementById("addForm").style.display = "none";
@@ -26,13 +25,8 @@ function loadNotes(){
         var header = document.createElement("h3");
         var node = document.createTextNode(JSONArray[i].name);
         header.appendChild(node);
-        //p tag
-        var p = document.createElement("p");
-        var pNode = document.createTextNode(JSONArray[i].text);
-        p.appendChild(pNode);
         //lägg in i diven
         div.appendChild(header);
-        div.appendChild(p);
         var element = document.getElementById("notes");
         element.appendChild(div);
     }

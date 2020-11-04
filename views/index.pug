@@ -4,7 +4,7 @@ block content
   #container
     div( id="newNote")
       br
-      input(type="text", id="title", name="title", placeholder="Note name").form-control
+      input(type="text", id="title", name="title", placeholder="Note name", maxlength="25").form-control
       br
       br
       textarea(name="note", id="text", cols="22", rows="10", form="newForm", placeholder="Write your note here...").form-control
@@ -13,7 +13,7 @@ block content
       input(type="submit", value="Add Note" onclick="addNote()").btn
       br
       br
-      input(type="submit", value="Close Form", onclick="closeForm()").btn
+      input(type="submit", value="Close Form", onclick="closeForm(), loadNotes()").btn
     br
     div(id="addForm")
       input(type="submit", value="Add note", onclick="openForm()").btn
