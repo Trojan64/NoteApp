@@ -23,8 +23,8 @@ a {
   color: #00B7FF;
 }
 
-.btn {
-  background-color: #D8AA52 !important;
+.btnn {
+  background-color: #D8AA52 ;
 }
 
 .NoteHead {
@@ -36,4 +36,10 @@ a {
 .NotePreview {
   font-size: 16px;
   margin: 0;
+}
+
+.addBtn {
+  background: url(../images/plusbtn.png) no-repeat;
+  height:20vh;
+  width:40%;
 }
