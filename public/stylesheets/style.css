@@ -41,11 +41,14 @@ a {
 
 .addBtn {
   background: url(../images/plusbtn.png) no-repeat;
+  background-position: center;
   height:20vh;
   width:40%;
   border: 2px solid #D8AA52;
 }
 
-.btnPos{
-  top: -20px
+.AddNotePos{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 15px;
 }
