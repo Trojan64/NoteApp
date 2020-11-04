@@ -2,7 +2,7 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #EEEEEB;
-  color: #2A2B2D;
+  color: #2A2B2D !important;
 }
 
 nav {
@@ -11,15 +11,18 @@ nav {
 
 .parent {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-column-gap: 6px;
-  grid-row-gap: 6px;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 48%));
+  grid-gap: 6px;
 }
 
 .parent > div {
   background-color: #EEEEEB;
+  height:20vh;
 }
 a {
   color: #00B7FF;
+}
+
+.btn {
+  background-color: #D8AA52 !important;
 }
