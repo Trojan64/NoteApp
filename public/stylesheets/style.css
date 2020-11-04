@@ -26,3 +26,14 @@ a {
 .btn {
   background-color: #D8AA52 !important;
 }
+
+.NoteHead {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0rem;
+}
+
+.NotePreview {
+  font-size: 16px;
+  margin: 0;
+}
