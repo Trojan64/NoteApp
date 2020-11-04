@@ -22,9 +22,10 @@ function loadNotes(){
     document.getElementById("notes").innerHTML = "";
     for (var i = 0; i < JSONArray.length; i++) {
         var div = document.createElement("div");
-        var header = document.createElement("h3");
+        var header = document.createElement("p");
         var node = document.createTextNode(JSONArray[i].name);
         header.appendChild(node);
+        header.setAttribute("class", "NoteHead");
         //p tag
         var p = document.createElement("p");
         var pNode = document.createTextNode(JSONArray[i].text);
@@ -40,4 +41,16 @@ function loadNotes(){
 
 function loadSpecificNote(id) {
     console.log("Load note: " + id);
+    //Title
+    var Title = document.createElement("p");
+    var TitleNode = document.createTextNode(JSONArray[id].name);
+    Title.appendChild(TitleNode);
+    //Notes
+    var Note = document.createElement("p");
+    var NoteNode = document.createTextNode(JSONArray[id].text);
+    Note.appendChild(NoteNode);
+    //add to readNote div
+    var element = document.getElementById("readNote");
+    element.appendChild(Title);
+    element.appendChild(Note);
 }
