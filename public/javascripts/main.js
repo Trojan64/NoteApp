@@ -5,3 +5,11 @@ var JSONString = {
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
+
+function openForm() {
+    document.getElementById("newNote").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("newNote").style.display = "none";
+  }
