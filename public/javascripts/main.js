@@ -26,13 +26,8 @@ function loadNotes(){
         var node = document.createTextNode(JSONArray[i].name);
         header.appendChild(node);
         header.setAttribute("class", "NoteHead");
-        //p tag
-        var p = document.createElement("p");
-        var pNode = document.createTextNode(JSONArray[i].text);
-        p.appendChild(pNode);
         //lägg in i diven
         div.appendChild(header);
-        div.appendChild(p);
         div.setAttribute("onclick", "loadSpecificNote(" + i + ")");
         var element = document.getElementById("notes");
         element.appendChild(div);
