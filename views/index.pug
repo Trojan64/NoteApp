@@ -1,11 +1,9 @@
 extends layout
 
 block content
-  h1= title
   #container
     div( id="newNote")
-      h3 add
-      input(type="text", id="title", name="title", placeholder="title").form-control
+      input(type="text", id="title", name="Note name", placeholder="title").form-control
       br
       br
       textarea(name="note", id="text", cols="22", rows="10", form="newForm", placeholder="note").form-control
