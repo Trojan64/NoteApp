@@ -40,7 +40,7 @@ a {
 }
 
 .addBtn {
- 
+  background: url(../images/plusbtn.png) no-repeat;
   height:20vh;
   width:40%;
   border: 2px solid #D8AA52;
@@ -49,5 +49,3 @@ a {
 .btnPos{
   top: -20px
 }
-
-background: url(../images/plusbtn.png) no-repeat;
