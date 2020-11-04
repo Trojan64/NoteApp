@@ -1,19 +1,22 @@
 extends layout
 
 block content
-  h1= title
   #container
     div( id="newNote")
-      h3 add
-      input(id="title", type="text",  name="title", placeholder="title").form-control
+      input(type="text", id="title", name="title", placeholder="Note name").form-control
       br
       br
-      textarea(id="text", name="note", cols="22", rows="10", form="newForm", placeholder="note").form-control
+      textarea(name="note", id="text", cols="22", rows="10", form="newForm", placeholder="Write your note here...").form-control
       br
       br
-      input(type="submit", onclick="addNote()").btn.btn-danger
+      input(type="submit", onclick="addNote()").btn
       br
       br
-      input(type="submit", value="Close form", onclick="closeForm()")
-    
-    input(id="addForm" type="submit", value="+", onclick="openForm()")
+      input(type="submit", value="Close form", onclick="closeForm()").btn
+    br
+    div(id="").parent
+      div
+        input(type="submit", value="Add new note", onclick="openForm()").btn
+      //test divs below, makes sure that every gridbox gets the correct position
+      div some text 
+      div some text 
