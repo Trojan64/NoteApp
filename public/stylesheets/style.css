@@ -24,7 +24,7 @@ a {
 }
 
 .btnn {
-  background-color: #D8AA52 ;
+  background-color: #D8AA52 !important ;
 }
 
 .NoteHead {
@@ -42,4 +42,9 @@ a {
   background: url(../images/plusbtn.png) no-repeat;
   height:20vh;
   width:40%;
+  border: 2px solid #D8AA52;
+}
+
+.btnPos{
+  top: -20px
 }
