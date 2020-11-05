@@ -17,17 +17,18 @@ function closeForm() {
 }
 
 function loadNotes(){
+    //variables
     var element = document.getElementById("notes"); //note element
+    var div = document.createElement("div");
+    var header = document.createElement("p");
+    var node = document.createTextNode("Add New Note");
     //hide specifik note
     document.getElementById("readNote").style.display = "none";
     //show All Notes
     element.style.display = "grid";
     element.innerHTML = "";
-    //add new Note button in same div
-    var div = document.createElement("div");
+    //add new Note button in 'Notes' div
     div.setAttribute("onclick", "openForm()");
-    var header = document.createElement("p");
-    var node = document.createTextNode("Add New Note");
     header.appendChild(node);
     header.setAttribute("class", "NoteHead AddNotePos");
     div.appendChild(header);
@@ -48,28 +49,29 @@ function loadNotes(){
 }
 
 function loadSpecificNote(id) {
+    //variables
     var element = document.getElementById("readNote");  //Readnote element
+    var Title = document.createElement("p");
+    var TitleNode = document.createTextNode(JSONArray[id].name);
+    var Note = document.createElement("p");
+    var NoteNode = document.createTextNode(JSONArray[id].text);
+    var Exit = document.createElement("div");
+    var ExitNode = document.createTextNode("X");
     console.log("Load note: " + id);
     //show readNotes
     element.style.display = "block";
     element.innerHTML = "";
     //Title
-    var Title = document.createElement("p");
-    var TitleNode = document.createTextNode(JSONArray[id].name);
     Title.appendChild(TitleNode);
     //Notes
-    var Note = document.createElement("p");
-    var NoteNode = document.createTextNode(JSONArray[id].text);
     Note.appendChild(NoteNode);
     //exit button
-    var Exit = document.createElement("div");
-    var ExitNode = document.createTextNode("X");
     Exit.appendChild(ExitNode);
     Exit.setAttribute("onclick", "loadNotes()");
     //add to readNote div
     element.appendChild(Title);
     element.appendChild(Note);
     element.appendChild(Exit);
-    //hide the other divs
+    //hide the other Notes
     document.getElementById("notes").style.display = "none";
 }
