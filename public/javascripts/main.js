@@ -9,27 +9,36 @@ JSONArray.push(JSONString);
 loadNotes();
 function openForm() {
     document.getElementById("newNote").style.display = "block";
-    document.getElementById("addForm").style.display = "none";
     document.getElementById("notes").innerHTML = "";
 }
   
 function closeForm() {
     document.getElementById("newNote").style.display = "none";
-    document.getElementById("addForm").style.display = "block";
 }
 
 function loadNotes(){
     document.getElementById("notes").innerHTML = "";
+    //add new Note button in same div
+    var div = document.createElement("div");
+    div.setAttribute("onclick", "openForm()");
+    var header = document.createElement("p");
+    var node = document.createTextNode("Add New Note");
+    header.appendChild(node);
+    header.setAttribute("class", "NoteHead AddNotePos");
+    div.appendChild(header);
+    var element = document.getElementById("notes");
+    element.appendChild(div);
+    //all the notes
     for (var i = 0; i < JSONArray.length; i++) {
-        var div = document.createElement("div");
-        var header = document.createElement("p");
-        var node = document.createTextNode(JSONArray[i].name);
+        div = document.createElement("div");
+        header = document.createElement("p");
+        node = document.createTextNode(JSONArray[i].name);
         header.appendChild(node);
         header.setAttribute("class", "NoteHead");
         //lägg in i diven
         div.appendChild(header);
         div.setAttribute("onclick", "loadSpecificNote(" + i + ")");
-        var element = document.getElementById("notes");
+        element = document.getElementById("notes");
         element.appendChild(div);
     }
 }
@@ -50,5 +59,4 @@ function loadSpecificNote(id) {
     element.appendChild(Note);
     //hide the other divs
     document.getElementById("notes").style.display = "none";
-    document.getElementById("addForm").style.display = "none";
 }
