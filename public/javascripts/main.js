@@ -22,16 +22,19 @@ function loadNotes(){
     var div = document.createElement("div");
     var header = document.createElement("p");
     var node = document.createTextNode("Add New Note");
+    var img = document.createElement("img");
     //hide specifik note
     document.getElementById("readNote").style.display = "none";
     //show All Notes
     element.style.display = "grid";
     element.innerHTML = "";
     //add new Note button in 'Notes' div
+    img.setAttribute("src", "/images/plusbtn.png");
     div.setAttribute("onclick", "openForm()");
     header.appendChild(node);
     header.setAttribute("class", "NoteHead AddNotePos");
     div.appendChild(header);
+    div.appendChild(img);
     element.appendChild(div);
     //all the notes
     for (var i = 0; i < JSONArray.length; i++) {
