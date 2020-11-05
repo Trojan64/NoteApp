@@ -17,11 +17,12 @@ function closeForm() {
 }
 
 function loadNotes(){
+    var element = document.getElementById("notes"); //note element
     //hide specifik note
     document.getElementById("readNote").style.display = "none";
     //show All Notes
-    document.getElementById("notes").style.display = "grid";
-    document.getElementById("notes").innerHTML = "";
+    element.style.display = "grid";
+    element.innerHTML = "";
     //add new Note button in same div
     var div = document.createElement("div");
     div.setAttribute("onclick", "openForm()");
@@ -30,7 +31,6 @@ function loadNotes(){
     header.appendChild(node);
     header.setAttribute("class", "NoteHead AddNotePos");
     div.appendChild(header);
-    var element = document.getElementById("notes");
     element.appendChild(div);
     //all the notes
     for (var i = 0; i < JSONArray.length; i++) {
@@ -48,10 +48,11 @@ function loadNotes(){
 }
 
 function loadSpecificNote(id) {
+    var element = document.getElementById("readNote");  //Readnote element
     console.log("Load note: " + id);
     //show readNotes
-    document.getElementById("readNote").style.display = "block";
-    document.getElementById("readNote").innerHTML = "";
+    element.style.display = "block";
+    element.innerHTML = "";
     //Title
     var Title = document.createElement("p");
     var TitleNode = document.createTextNode(JSONArray[id].name);
@@ -66,7 +67,6 @@ function loadSpecificNote(id) {
     Exit.appendChild(ExitNode);
     Exit.setAttribute("onclick", "loadNotes()");
     //add to readNote div
-    var element = document.getElementById("readNote");
     element.appendChild(Title);
     element.appendChild(Note);
     element.appendChild(Exit);
