@@ -2,7 +2,8 @@ console.log("Hej ( ͡° ͜ʖ ͡°)");
 closeForm();
 var JSONString = {
     "name":"Brittas bullar",
-    "text":" brittas bullrecept för goda bullar"
+    "text":" brittas bullrecept för goda bullar",
+    "id":"0"
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
@@ -36,6 +37,7 @@ function loadNotes(){
     header.setAttribute("class", "NoteHead AddNotePos");
     div.appendChild(header);
     div.appendChild(img);
+    div.setAttribute("class", "addBtnDiv");
     element.appendChild(div);
     //all the notes
     for (var i = 0; i < JSONArray.length; i++) {
@@ -55,10 +57,9 @@ function loadNotes(){
 function loadSpecificNote(id) {
     //variables
     var element = document.getElementById("readNote");  //Readnote element
-    var Title = document.createElement("p");
-    var TitleNode = document.createTextNode(JSONArray[id].name);
-    var Note = document.createElement("p");
-    var NoteNode = document.createTextNode(JSONArray[id].text);
+    var Title = document.createElement("input");
+    var Note = document.createElement("textarea");
+    var globalId = JSONArray[id].id;
     var Exit = document.createElement("input");
     var ExitNode = document.createTextNode("X");
     console.log("Load note: " + id);
@@ -66,12 +67,16 @@ function loadSpecificNote(id) {
     element.style.display = "block";
     element.innerHTML = "";
     //Title
-    Title.appendChild(TitleNode);
+    Title.setAttribute("id", "Titel");
+    Title.setAttribute("type", "text");
+    Title.value = JSONArray[id].name;
     //Notes
-    Note.appendChild(NoteNode);
+    Note.setAttribute("id", "Notering");
+    Note.setAttribute("type", "textfield");
+    Note.value = JSONArray[id].text;
     //exit button
     Exit.appendChild(ExitNode);
-    Exit.setAttribute("onclick", "loadNotes()");
+    Exit.setAttribute("onclick", "editNote(" + globalId + "), loadNotes()");
     Exit.setAttribute("type", "submit");
     Exit.setAttribute("value", "Close & Save");
     Exit.setAttribute("class", "btn btnn");
@@ -81,4 +86,10 @@ function loadSpecificNote(id) {
     element.appendChild(Exit);
     //hide the other Notes
     document.getElementById("notes").style.display = "none";
+}
+
+function editNote(id) {
+    console.log("saved nr: " + id);
+    JSONArray[id].name = document.getElementById("Titel").value;
+    JSONArray[id].text = document.getElementById("Notering").value;
 }
