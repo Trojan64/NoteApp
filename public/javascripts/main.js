@@ -30,7 +30,7 @@ function loadNotes(){
     element.style.display = "grid";
     element.innerHTML = "";
     //add new Note button in 'Notes' div
-    img.setAttribute("src", "/images/plusbtn.png");
+    img.setAttribute("src", "/images/plusbtnV2.png");
     img.setAttribute("class", "addBtn");
     div.setAttribute("onclick", "openForm()");
     header.appendChild(node);
