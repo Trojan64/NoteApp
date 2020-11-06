@@ -55,10 +55,9 @@ function loadNotes(){
 function loadSpecificNote(id) {
     //variables
     var element = document.getElementById("readNote");  //Readnote element
-    var Title = document.createElement("p");
-    var TitleNode = document.createTextNode(JSONArray[id].name);
-    var Note = document.createElement("p");
-    var NoteNode = document.createTextNode(JSONArray[id].text);
+    var Title = document.createElement("input");
+    var Note = document.createElement("textarea");
+    var globalId = JSONArray[id].id;
     var Exit = document.createElement("input");
     var ExitNode = document.createTextNode("X");
     console.log("Load note: " + id);
@@ -66,9 +65,13 @@ function loadSpecificNote(id) {
     element.style.display = "block";
     element.innerHTML = "";
     //Title
-    Title.appendChild(TitleNode);
+    Title.setAttribute("id", "Titel");
+    Title.setAttribute("type", "text");
+    Title.value = JSONArray[id].name;
     //Notes
-    Note.appendChild(NoteNode);
+    Note.setAttribute("id", "Notering");
+    Note.setAttribute("type", "textfield");
+    Note.value = JSONArray[id].text;
     //exit button
     Exit.appendChild(ExitNode);
     Exit.setAttribute("onclick", "loadNotes()");
