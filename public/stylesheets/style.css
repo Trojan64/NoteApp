@@ -26,6 +26,7 @@ a {
 
 .btnn {
   background-color: #D8AA52 !important ;
+  margin: 0 5px 0 5px;
 }
 
 .NoteHead {
@@ -39,6 +40,11 @@ a {
   margin: 0;
 }
 
+.btnCenter {
+  text-align: center;
+  margin: auto;
+}
+
 .addBtn {
   text-align: center;
   width: 75px;
@@ -46,6 +52,10 @@ a {
   position: relative;
   margin:0 calc(50% - 37.5px) 0 calc(50% - 37.5px);
   bottom: 0;
+}
+
+.addBtnDiv{
+  border-color: #A11075;
 }
 
 .AddNotePos{

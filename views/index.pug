@@ -10,8 +10,9 @@ block content
       textarea(name="note", id="text", cols="22", rows="10", form="newForm", placeholder="Write your note here...").form-control
       br
       br
-      input(type="submit", value="Add Note" onclick="addNote()").btn.btnn
-      input(type="submit", value="Close Form", onclick="closeForm(), loadNotes()").btn.btnn
+      div.btnCenter
+        input(type="submit", value="Add Note" onclick="addNote()").btn.btnn
+        input(type="submit", value="Close Form", onclick="closeForm(), loadNotes()").btn.btnn
     br
     br  
     div(id="notes").parent
