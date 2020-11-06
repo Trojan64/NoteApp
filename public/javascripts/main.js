@@ -2,7 +2,8 @@ console.log("Hej ( ͡° ͜ʖ ͡°)");
 closeForm();
 var JSONString = {
     "name":"Brittas bullar",
-    "text":" brittas bullrecept för goda bullar"
+    "text":" brittas bullrecept för goda bullar",
+    "id":"0"
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
@@ -36,6 +37,7 @@ function loadNotes(){
     header.setAttribute("class", "NoteHead AddNotePos");
     div.appendChild(header);
     div.appendChild(img);
+    div.setAttribute("class", "addBtnDiv");
     element.appendChild(div);
     //all the notes
     for (var i = 0; i < JSONArray.length; i++) {
@@ -74,7 +76,7 @@ function loadSpecificNote(id) {
     Note.value = JSONArray[id].text;
     //exit button
     Exit.appendChild(ExitNode);
-    Exit.setAttribute("onclick", "loadNotes()");
+    Exit.setAttribute("onclick", "editNote(" + globalId + "), loadNotes()");
     Exit.setAttribute("type", "submit");
     Exit.setAttribute("value", "Close & Save");
     Exit.setAttribute("class", "btn btnn");
@@ -84,4 +86,10 @@ function loadSpecificNote(id) {
     element.appendChild(Exit);
     //hide the other Notes
     document.getElementById("notes").style.display = "none";
+}
+
+function editNote(id) {
+    console.log("saved nr: " + id);
+    JSONArray[id].name = document.getElementById("Titel").value;
+    JSONArray[id].text = document.getElementById("Notering").value;
 }
