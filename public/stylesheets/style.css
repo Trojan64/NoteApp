@@ -1,12 +1,16 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #EEEEEB;
+  background-color: #F9F9fa !important;
   color: #2A2B2D !important;
+  height:100vh;
+  width:100vw;
 }
 
 nav {
   background-color: #EEEEEB;
+  font-family: 'Architects Daughter'!important;
+  font-weight: bold;
 }
 
 .parent {
@@ -33,6 +37,8 @@ a {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 0rem;
+  font-family: 'Bitter' !important;
+  padding: 5px;
 }
 
 .NotePreview {
@@ -60,7 +66,7 @@ a {
 
 .AddNotePos{
   text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 15px;
 }
 
