@@ -72,6 +72,7 @@ function loadSpecificNote(id) {
     //exit button
     Exit.appendChild(ExitNode);
     Exit.setAttribute("onclick", "loadNotes()");
+    Exit.setAttribute("class", "ExitBtn");
     //add to readNote div
     element.appendChild(Title);
     element.appendChild(Note);
