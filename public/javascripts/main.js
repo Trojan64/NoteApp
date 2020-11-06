@@ -57,34 +57,18 @@ function loadNotes(){
 function loadSpecificNote(id) {
     //variables
     var element = document.getElementById("readNote");  //Readnote element
-    var Title = document.createElement("input");
-    var Note = document.createElement("textarea");
+    var Title = document.getElementById("Titel");
+    var Note = document.getElementById("Notering");
+    var Save = document.getElementById("Save");
     var globalId = JSONArray[id].id;
-    var Exit = document.createElement("input");
-    var ExitNode = document.createTextNode("X");
     console.log("Load note: " + id);
+
     //show readNotes
     element.style.display = "block";
-    element.innerHTML = "";
-    //Title
-    Title.setAttribute("id", "Titel");
-    Title.setAttribute("type", "text");
+    //Get Values
     Title.value = JSONArray[id].name;
-    //Notes
-    Note.setAttribute("id", "Notering");
-    Note.setAttribute("type", "textfield");
     Note.value = JSONArray[id].text;
-    //exit button
-    Exit.appendChild(ExitNode);
-    Exit.setAttribute("onclick", "editNote(" + globalId + "), loadNotes()");
-    Exit.setAttribute("type", "submit");
-    Exit.setAttribute("value", "Close & Save");
-    Exit.setAttribute("class", "btn btnn");
-    //add to readNote div
-    element.appendChild(Title);
-    element.appendChild(Note);
-    element.appendChild(Exit);
-    //hide the other Notes
+    Save.setAttribute("onclick", "editNote(" + globalId + "), loadNotes()");
     document.getElementById("notes").style.display = "none";
 }
 
