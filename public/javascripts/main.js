@@ -59,7 +59,7 @@ function loadSpecificNote(id) {
     var TitleNode = document.createTextNode(JSONArray[id].name);
     var Note = document.createElement("p");
     var NoteNode = document.createTextNode(JSONArray[id].text);
-    var Exit = document.createElement("div");
+    var Exit = document.createElement("input");
     var ExitNode = document.createTextNode("X");
     console.log("Load note: " + id);
     //show readNotes
@@ -72,7 +72,9 @@ function loadSpecificNote(id) {
     //exit button
     Exit.appendChild(ExitNode);
     Exit.setAttribute("onclick", "loadNotes()");
-    Exit.setAttribute("class", "ExitBtn");
+    Exit.setAttribute("type", "submit");
+    Exit.setAttribute("value", "Close & Save");
+    Exit.setAttribute("class", "btn btnn");
     //add to readNote div
     element.appendChild(Title);
     element.appendChild(Note);
