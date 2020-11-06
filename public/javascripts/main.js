@@ -30,6 +30,7 @@ function loadNotes(){
     element.innerHTML = "";
     //add new Note button in 'Notes' div
     img.setAttribute("src", "/images/plusbtn.png");
+    img.setAttribute("class", "addBtn");
     div.setAttribute("onclick", "openForm()");
     header.appendChild(node);
     header.setAttribute("class", "NoteHead AddNotePos");
