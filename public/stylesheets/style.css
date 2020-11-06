@@ -31,6 +31,7 @@ a {
 .btnn {
   background-color: #D8AA52 !important ;
   margin: 0 5px 0 5px;
+  transition: 1s !important;
 }
 
 .NoteHead {
@@ -78,6 +79,15 @@ textarea {
   resize: none !important;
 }
 
+.btm{
+  border: none;
+  transition:border 1s !important;
+}
+
+.btm:focus{
+  border-bottom: 2px solid #A11075 !important;
+}
+
 @media only screen and (min-width: 600px) {
   .NoteHead {
     font-size: 24px;
@@ -95,4 +105,27 @@ textarea {
     grid-gap: 20px;
     justify-content: center;
   }
+}
+
+@media screen and (orientation:landscape) {
+  .parent > div {
+    height:35vh;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body{
+    background-color:#2A2B2D !important;
+    color: #EEEEEB !important;
+
+  }
+
+  .nav, .parent > div{
+    background-color: #1A1B1D;
+  }
+
+  .form-control{
+    background-color: #1A1B1D !important;
+  }
+
 }
