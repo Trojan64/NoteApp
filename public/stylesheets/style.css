@@ -55,7 +55,7 @@ a {
 }
 
 .addBtnDiv{
-  border-color: #A11075;
+  border-color: #A11075 !important;
 }
 
 .AddNotePos{
@@ -66,6 +66,10 @@ a {
 
 div {
   position: relative;
+}
+
+textarea {
+  resize: none !important;
 }
 
 @media only screen and (min-width: 600px) {

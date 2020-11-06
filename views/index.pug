@@ -6,21 +6,18 @@ block content
       br
       input(type="text", id="title", name="title", placeholder="Note name", maxlength="25").form-control
       br
+
+      textarea(name="note", id="text", cols="22", rows="15", form="newForm", placeholder="Write your note here...").form-control
       br
-      textarea(name="note", id="text", cols="22", rows="10", form="newForm", placeholder="Write your note here...").form-control
-      br
-      br
+
       div.btnCenter
         input(type="submit", value="Add Note" onclick="addNote()").btn.btnn
         input(type="submit", value="Close Form", onclick="closeForm(), loadNotes()").btn.btnn
-    br
-    br  
+    br 
     div(id="notes").parent
     div(id="readNote")
-        input(id="Titel", type="text")
+        input(id="Titel", type="text").form-control
         br
+        textarea(id="Notering" type="text" rows="15").form-control
         br
-        textarea(id="Notering" type="text")
-        br
-        br
-        input(id="Save", type="submit" class="btn btnn", value="Close & Save")
+        input(id="Save", type="submit", value="Close & Save").btn.btnn
