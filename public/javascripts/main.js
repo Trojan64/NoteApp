@@ -72,6 +72,8 @@ function loadSpecificNote(id) {
     document.getElementById("notes").style.display = "none";
 }
 
+
+
 function editNote(id) {
     console.log("saved nr: " + id);
     JSONArray[id].name = document.getElementById("Titel").value;
