@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.10");
+console.log("JavaScript: 1.11");
 console.log("CSS: 1.00");
 closeForm();
 var JSONString = {
@@ -60,16 +60,14 @@ function loadSpecificNote(id) {
     var Title = document.getElementById("Titel");
     var Note = document.getElementById("Notering");
     var Save = document.getElementById("Save");
-    var globalId = JSONArray[id].id;
     var Delete = document.getElementById("Delete");
     console.log("Load note: " + id);
-
     //show readNotes
     element.style.display = "block";
     //Get Values
     Title.value = JSONArray[id].name;
     Note.value = JSONArray[id].text;
-    Save.setAttribute("onclick", "editNote(" + globalId + "), loadNotes()");
+    Save.setAttribute("onclick", "editNote(" + id + "), loadNotes()");
     Delete.setAttribute("onclick", "deleteNote(" + id + ")");
     document.getElementById("notes").style.display = "none";
 }
