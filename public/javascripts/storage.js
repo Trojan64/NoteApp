@@ -11,6 +11,10 @@ function saveSNote() {  //save note to storage
 
 function loadSNote() {  //load storage notes
     var stored = localStorage['JSON_ARRAY'];
+    if (stored == undefined) {
+        saveSNote();
+        stored = localStorage['JSON_ARRAY'];
+    }
     JSONArray = JSON.parse(stored);
     console.log(JSON.parse(stored));
 }
