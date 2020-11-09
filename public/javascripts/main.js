@@ -1,11 +1,11 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.02");
+console.log("JavaScript: 1.10");
 console.log("CSS: 1.00");
 closeForm();
 var JSONString = {
     "name":"Brittas bullar",
     "text":" brittas bullrecept för goda bullar",
-    "id":"0"
+    "id": 0
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
@@ -61,6 +61,7 @@ function loadSpecificNote(id) {
     var Note = document.getElementById("Notering");
     var Save = document.getElementById("Save");
     var globalId = JSONArray[id].id;
+    var Delete = document.getElementById("Delete");
     console.log("Load note: " + id);
 
     //show readNotes
@@ -69,6 +70,7 @@ function loadSpecificNote(id) {
     Title.value = JSONArray[id].name;
     Note.value = JSONArray[id].text;
     Save.setAttribute("onclick", "editNote(" + globalId + "), loadNotes()");
+    Delete.setAttribute("onclick", "deleteNote(" + id + ")");
     document.getElementById("notes").style.display = "none";
 }
 
