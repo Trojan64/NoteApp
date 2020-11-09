@@ -7,12 +7,10 @@ var JSONString = {
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
-loadNotes();
 function openForm() {
     document.getElementById("newNote").style.display = "block";
     document.getElementById("notes").innerHTML = "";
 }
-  
 function closeForm() {
     document.getElementById("newNote").style.display = "none";
 }
