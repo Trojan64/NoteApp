@@ -11,7 +11,7 @@ block content
       br
 
       div.btnCenter
-        input(type="submit", value="Close & Save" onclick="addNote()").btn.btnn
+        input(type="submit", value="Close & Save", onclick="addNote()").btn.btnn
         input(type="submit", value="View Notes", onclick="closeForm(), loadNotes()").btn.btnn
     br 
     div(id="notes").parent
@@ -23,3 +23,4 @@ block content
         div.btnCenter
           input(id="Save", type="submit", value="Close & Save").btn.btnn
           input(id="Delete", type="submit", value="Delete note").btn.btnn
+  input(type="submit", id="help", value=" ",onclick="", ).btn.btnn.crcBtn
