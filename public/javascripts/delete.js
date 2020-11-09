@@ -1,3 +1,5 @@
 function deleteNote(id) {     //Delete Note
-    JSONArray.pop(id);
+    JSONArray.splice(id, 1);
+    saveSNote();
+    loadNotes();
 }
