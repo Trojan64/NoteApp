@@ -32,7 +32,7 @@ nav {
 .parent {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40%, 48%));
-  grid-gap: 6px;
+  grid-gap: 10px;
 }
 
 .parent > div {
