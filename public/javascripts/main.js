@@ -1,6 +1,11 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
+<<<<<<< HEAD
 console.log("JavaScript: 1.01");
 console.log("CSS: 1.00");
+=======
+console.log("JavaScript: 1.00");
+console.log("CSS: 1.10");
+>>>>>>> 9828942fc83ed1147049db28ac5bece8bd67842a
 closeForm();
 var JSONString = {
     "name":"Brittas bullar",

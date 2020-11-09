@@ -32,13 +32,14 @@ nav {
 .parent {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40%, 48%));
-  grid-gap: 6px;
+  grid-gap: 10px;
 }
 
 .parent > div {
-  background-color: #F9F9Ea;
+  background-color: #feff9c;
   height:20vh;
-  border: 2px solid #D8AA52;
+  border: 1px solid black;
+  box-shadow: 3px 3px 7px black;
 }
 a {
   color: #00B7FF;
@@ -79,7 +80,7 @@ a {
 }
 
 .addBtnDiv{
-  border-color: #A11075 !important;
+  border-color: black !important;
 }
 
 .AddNotePos{
