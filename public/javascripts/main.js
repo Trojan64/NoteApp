@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.02");
+console.log("JavaScript: 1.10");
 console.log("CSS: 1.00");
 closeForm();
 var JSONString = {
