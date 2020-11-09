@@ -24,7 +24,7 @@ body {
 }
 
 nav {
-  background-color:#F9F9Ea;
+  background-color: #EEEEEB;
   font-family: 'Architects Daughter'!important;
   font-weight: bold;
 }
@@ -36,7 +36,7 @@ nav {
 }
 
 .parent > div {
-  background-color: #F9F9Ea;
+  background-color: #EEEEEB;
   height:20vh;
   border: 2px solid #D8AA52;
 }
