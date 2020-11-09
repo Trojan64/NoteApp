@@ -1,13 +1,24 @@
 function addNote() {
-    var Title = document.getElementById("title").value;
-    var text = document.getElementById("text").value;
+    var Title = document.getElementById("title");
+    var text = document.getElementById("text");
     var id = JSONArray.length;
-    var JSONString = {
-        "name": Title,
-        "text": text,
-        "id": id
-    };
+    if (Title != "") {
+        var JSONString = {
+            "name": Title.value,
+            "text": text.value,
+            "id": id
+        };
+    }
+    else {
+        var JSONString = {
+            "name": "[UNNAMNED]",
+            "text": text,
+            "id": id
+        };
+    }
     JSONArray.push(JSONString);
+    Title.value = "";
+    text.value = "";
     closeForm();
     saveSNote();
     loadNotes();
