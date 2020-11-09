@@ -16,5 +16,4 @@ function loadSNote() {  //load storage notes
         stored = localStorage['JSON_ARRAY'];
     }
     JSONArray = JSON.parse(stored);
-    console.log(JSON.parse(stored));
 }
