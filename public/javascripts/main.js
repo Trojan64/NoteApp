@@ -4,7 +4,7 @@ console.log("CSS: 1.2.0");
 closeForm();
 var JSONString = {
     "name":"Hur man använder appen",
-    "text":" hur man använder appen",
+    "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
     "id": 0
                     };
 var JSONArray = [];
