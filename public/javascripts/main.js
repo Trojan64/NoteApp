@@ -1,4 +1,6 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
+console.log("JavaScript: 1.00");
+console.log("CSS: 1.00");
 closeForm();
 var JSONString = {
     "name":"Brittas bullar",
