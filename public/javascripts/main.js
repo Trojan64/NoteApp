@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.00");
+console.log("JavaScript: 1.01");
 console.log("CSS: 1.00");
 closeForm();
 var JSONString = {
@@ -76,4 +76,5 @@ function editNote(id) {
     console.log("saved nr: " + id);
     JSONArray[id].name = document.getElementById("Titel").value;
     JSONArray[id].text = document.getElementById("Notering").value;
+    saveSNote();
 }
