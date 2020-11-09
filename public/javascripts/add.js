@@ -9,5 +9,6 @@ function addNote() {
     };
     JSONArray.push(JSONString);
     closeForm();
+    saveSNote();
     loadNotes();
 }
