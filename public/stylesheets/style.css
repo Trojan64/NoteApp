@@ -30,8 +30,9 @@ a {
 
 .btnn {
   background-color: #D8AA52 !important ;
-  margin: 0 5px 0 5px;
+  margin: 2px;
   transition: 1s !important;
+  padding: 0.375rem !important;
 }
 
 .NoteHead {
