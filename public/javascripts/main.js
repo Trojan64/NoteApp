@@ -1,10 +1,10 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.11");
+console.log("JavaScript: 1.12");
 console.log("CSS: 1.2.0");
 closeForm();
 var JSONString = {
-    "name":"Brittas bullar",
-    "text":" brittas bullrecept för goda bullar",
+    "name":"Hur man använder appen",
+    "text":" hur man använder appen",
     "id": 0
                     };
 var JSONArray = [];
@@ -40,7 +40,7 @@ function loadNotes(){
     div.setAttribute("class", "addBtnDiv");
     element.appendChild(div);
     //all the notes
-    for (var i = 0; i < JSONArray.length; i++) {
+    for (var i = 1; i < JSONArray.length; i++) {
         div = document.createElement("div");
         header = document.createElement("p");
         node = document.createTextNode(JSONArray[i].name);
@@ -73,8 +73,13 @@ function loadSpecificNote(id) {
 }
 
 function editNote(id) {
-    console.log("saved nr: " + id);
-    JSONArray[id].name = document.getElementById("Titel").value;
-    JSONArray[id].text = document.getElementById("Notering").value;
-    saveSNote();
+    if (id!=0) {
+        console.log("saved nr: " + id);
+        JSONArray[id].name = document.getElementById("Titel").value;
+        JSONArray[id].text = document.getElementById("Notering").value;
+        saveSNote();
+    }   else {
+        console.log("you cant change the tutorial!");
+    }
+
 }
