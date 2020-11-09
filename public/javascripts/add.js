@@ -2,7 +2,7 @@ function addNote() {
     var Title = document.getElementById("title");
     var text = document.getElementById("text");
     var id = JSONArray.length;
-    if (Title != "") {
+    if (Title.value != "") {
         var JSONString = {
             "name": Title.value,
             "text": text.value,
