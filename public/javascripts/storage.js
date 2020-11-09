@@ -6,7 +6,9 @@
 window.onload = loadSNote();
 loadNotes();
 function saveSNote() {  //save note to storage
+    localStorage.clear;
     localStorage['JSON_ARRAY'] = JSON.stringify(JSONArray); // only strings
+    //localStorage.setItem('JSON_ARRAY', JSON.stringify(JSONArray)); // only strings
 }
 
 function loadSNote() {  //load storage notes
@@ -16,5 +18,4 @@ function loadSNote() {  //load storage notes
         stored = localStorage['JSON_ARRAY'];
     }
     JSONArray = JSON.parse(stored);
-    console.log(JSON.parse(stored));
 }
