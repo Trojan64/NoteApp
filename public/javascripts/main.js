@@ -1,10 +1,10 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.14");
+console.log("JavaScript: 1.15");
 console.log("CSS: 1.4.0");
 closeForm();
 var JSONString = {
     "name":"Hur man använder appen",
-    "text":" hur man använder appen",
+    "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
     "id": 0
                     };
 var JSONArray = [];
