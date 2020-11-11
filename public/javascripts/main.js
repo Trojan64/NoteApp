@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.17.0");
+console.log("JavaScript: 1.18.0");
 console.log("CSS: 1.6");
 closeForm();
 var isFavorite = false;
@@ -103,17 +103,9 @@ function loadSpecificNote(id) {
     else {
          document.getElementById("Favorite").style.backgroundImage="url(/images/heartFalse.png)";
     }
-    setTimeout(updateFavorite, 1000, id);
-}
 
-function updateFavorite(id) {
-    console.log("updated");
-    if (JSONArray[id].Favorite){
-        document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";
-    }
-    else {
-         document.getElementById("Favorite").style.backgroundImage="url(/images/heartFalse.png)";
-    }
+    addToFavorite(id);
+    addToFavorite(id);
 }
 
 function editNote(id) {
@@ -121,7 +113,6 @@ function editNote(id) {
         console.log("saved nr: " + id);
         JSONArray[id].name = document.getElementById("Titel").value;
         JSONArray[id].text = document.getElementById("Notering").value;
-        JSONArray[id].favorite = isFavorite;
         saveSNote();
     }   else {
         console.log("you cant change the tutorial!");
@@ -139,7 +130,4 @@ function addToFavorite(id){
         JSONArray[id].favorite = true;
         document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";
     }
-    console.log(JSONArray[id].favorite);
-
 }
-window.onload = loadSpecificNote(0);

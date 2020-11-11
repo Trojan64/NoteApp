@@ -16,10 +16,15 @@ body {
   font-family: 'Architects Daughter'!important;
   font-weight: bold;
   display: flex;
+  margin-bottom: 10px;
 }
 
 .navTools{
   display: none;
+}
+
+.navSize{
+  width:100%;
 }
 
 .parent {
@@ -123,13 +128,15 @@ textarea {
 }
 
 .heart{
-  background-image: url(/images/heartFalse.png);
+  /*background-image: url(/images/heartFalse.png);*/
   background-repeat: no-repeat;
   background-size: 40px, 40px;
   width: 40px;
   height: 40px;
   background-position-x: center;
   float: right;
+  border:none;
+  margin: 10px;
 }
 
 .returnArrow{
@@ -140,7 +147,8 @@ textarea {
   height:40px;
   background-position-x: center;
   border: none;
-}
+  margin:10px;
+} 
 
 .trashCan{
   background-image: url(/images/trashcan.png);
@@ -150,6 +158,8 @@ textarea {
   height:40px;
   background-position-x: center;
   border: none;
+  margin:10px;
+  margin-right: 0;
 }
 
 .trashBackground{
