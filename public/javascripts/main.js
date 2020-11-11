@@ -1,17 +1,19 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.15.1");
-console.log("CSS: 1.4.1");
+console.log("JavaScript: 1.15.2");
+console.log("CSS: 1.5");
 closeForm();
 var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
-    "id": 0
+    "id": 0,
+    "favorite": true,
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
 function openForm() {
     document.getElementById("newNote").style.display = "block";
     document.getElementById("notes").innerHTML = "";
+    document.getElementById("help").style.display = "none";
 }
 function closeForm() {
     document.getElementById("newNote").style.display = "none";
@@ -19,6 +21,7 @@ function closeForm() {
 
 function loadNotes(){
     //variables
+    var all = true;
     var element = document.getElementById("notes"); //note element
     var div = document.createElement("div");
     var header = document.createElement("p");
@@ -26,6 +29,7 @@ function loadNotes(){
     var img = document.createElement("img");
     //hide specifik note
     document.getElementById("readNote").style.display = "none";
+    document.getElementById("help").style.display = "inline-block";
     //show All Notes
     element.style.display = "grid";
     element.innerHTML = "";
@@ -41,6 +45,7 @@ function loadNotes(){
     element.appendChild(div);
     //all the notes
     for (var i = 1; i < JSONArray.length; i++) {
+        if (JSONArray[i].favorite || all) {
         div = document.createElement("div");
         header = document.createElement("p");
         node = document.createTextNode(JSONArray[i].name);
@@ -51,6 +56,7 @@ function loadNotes(){
         div.setAttribute("onclick", "loadSpecificNote(" + i + ")");
         element = document.getElementById("notes");
         element.appendChild(div);
+        }
     }
 }
 
@@ -73,6 +79,7 @@ function loadSpecificNote(id) {
     Note.value = JSONArray[id].text;
     Save.setAttribute("onclick", "editNote(" + id + "), loadNotes()");
     Delete.setAttribute("onclick", "deleteNote(" + id + ")");
+    document.getElementById("help").style.display = "none";
     document.getElementById("notes").style.display = "none";
 }
 
@@ -81,6 +88,7 @@ function editNote(id) {
         console.log("saved nr: " + id);
         JSONArray[id].name = document.getElementById("Titel").value;
         JSONArray[id].text = document.getElementById("Notering").value;
+        JSONArray[id].favorite = document.getElementById("Favorite").value
         saveSNote();
     }   else {
         console.log("you cant change the tutorial!");
