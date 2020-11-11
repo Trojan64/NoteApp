@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.18.5");
+console.log("JavaScript: 1.19");
 console.log("CSS: 1.7");
 closeForm();
 var isFavorite = false;
@@ -24,6 +24,7 @@ function openForm() {
     document.getElementById("Save").style.display = "none";
     document.getElementById("Checkmark").style.display = "block";
     document.getElementById("Crossmark").style.display = "block";
+    document.getElementById("Delete").style.display = "none";
     
     isFavorite = false;
 }
@@ -160,4 +161,15 @@ function addToFavorite(id){
         JSONArray[id].favorite = true;
         document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";
     }
+}
+
+function filterByFavorite(){
+    if(all){
+        all = false
+        document.getElementById("Switch").style.backgroundImage="url(/images/heartTrue.png)";
+    } else{
+        all = true
+        document.getElementById("Switch").style.backgroundImage="url(/images/heartFalse.png)";
+    }
+
 }
