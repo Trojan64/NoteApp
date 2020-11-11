@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.15.1");
+console.log("JavaScript: 1.15.2");
 console.log("CSS: 1.4.1");
 closeForm();
 var JSONString = {
@@ -12,6 +12,7 @@ JSONArray.push(JSONString);
 function openForm() {
     document.getElementById("newNote").style.display = "block";
     document.getElementById("notes").innerHTML = "";
+    document.getElementById("help").style.display = "none";
 }
 function closeForm() {
     document.getElementById("newNote").style.display = "none";
@@ -26,6 +27,7 @@ function loadNotes(){
     var img = document.createElement("img");
     //hide specifik note
     document.getElementById("readNote").style.display = "none";
+    document.getElementById("help").style.display = "inline-block";
     //show All Notes
     element.style.display = "grid";
     element.innerHTML = "";
@@ -69,6 +71,7 @@ function loadSpecificNote(id) {
     Note.value = JSONArray[id].text;
     Save.setAttribute("onclick", "editNote(" + id + "), loadNotes()");
     Delete.setAttribute("onclick", "deleteNote(" + id + ")");
+    document.getElementById("help").style.display = "none";
     document.getElementById("notes").style.display = "none";
 }
 
