@@ -1,7 +1,10 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.16");
+console.log("JavaScript: 1.16.1");
 console.log("CSS: 1.6");
 closeForm();
+
+var isFavorite = false;
+
 var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
@@ -15,6 +18,8 @@ function openForm() {
     document.getElementById("notes").innerHTML = "";
     document.getElementById("help").style.display = "none";
     document.getElementById("nav").style.display = "none";
+    
+    isFavorite = false;
 }
 function closeForm() {
     document.getElementById("newNote").style.display = "none";
@@ -84,6 +89,13 @@ function loadSpecificNote(id) {
     document.getElementById("help").style.display = "none";
     document.getElementById("notes").style.display = "none";
     document.getElementById("nav").style.display = "none";
+
+    if (isFavorite = true){
+        document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";
+    }
+    else{
+        document.getElementById("Favorite").style.backgroundImage="url(/images/heartFalse.png)";
+    }
 }
 
 function editNote(id) {
@@ -91,17 +103,18 @@ function editNote(id) {
         console.log("saved nr: " + id);
         JSONArray[id].name = document.getElementById("Titel").value;
         JSONArray[id].text = document.getElementById("Notering").value;
-        JSONArray[id].favorite = document.getElementById("Favorite").value
-        if(favorite){
-            img.setAttribute("src", "/images/heartTrue.png");
-        }
-        else{
-            img.setAttribute("src", "/images/heartFalse.png");
-        }
-            
+        JSONArray[id].favorite = isFavorite;
         saveSNote();
     }   else {
         console.log("you cant change the tutorial!");
     }
 
+}
+function addToFavorite(id){
+    if (isFavorite = true){
+        isFavorite = false;
+    }
+    else{
+        isFavorite = true;
+    }
 }
