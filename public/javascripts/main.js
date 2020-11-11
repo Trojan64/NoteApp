@@ -3,7 +3,7 @@ console.log("JavaScript: 1.18.5");
 console.log("CSS: 1.7");
 closeForm();
 var isFavorite = false;
-
+var all = true;     //show all notes or just favorite
 var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
@@ -33,7 +33,6 @@ function closeForm() {
 
 function loadNotes(){
     //variables
-    var all = true;
     var element = document.getElementById("notes"); //note element
     var div = document.createElement("div");
     var header = document.createElement("p");
