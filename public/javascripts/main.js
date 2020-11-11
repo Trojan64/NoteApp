@@ -90,10 +90,10 @@ function loadSpecificNote(id) {
     document.getElementById("notes").style.display = "none";
     document.getElementById("nav").style.display = "none";
 
-    if (isFavorite = true){
+    if (isFavorite){
         document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";
     }
-    else{
+    if (isFavorite == false){
         document.getElementById("Favorite").style.backgroundImage="url(/images/heartFalse.png)";
     }
 }
