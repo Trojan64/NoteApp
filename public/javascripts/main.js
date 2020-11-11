@@ -6,7 +6,7 @@ var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
     "id": 0,
-    "favorite": True,
+    "favorite": true
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
@@ -20,6 +20,7 @@ function closeForm() {
 
 function loadNotes(){
     //variables
+    var all = true;
     var element = document.getElementById("notes"); //note element
     var div = document.createElement("div");
     var header = document.createElement("p");
@@ -42,6 +43,7 @@ function loadNotes(){
     element.appendChild(div);
     //all the notes
     for (var i = 1; i < JSONArray.length; i++) {
+        if (JSONArray[i].favorite || all) {
         div = document.createElement("div");
         header = document.createElement("p");
         node = document.createTextNode(JSONArray[i].name);
@@ -52,6 +54,7 @@ function loadNotes(){
         div.setAttribute("onclick", "loadSpecificNote(" + i + ")");
         element = document.getElementById("notes");
         element.appendChild(div);
+        }
     }
 }
 
