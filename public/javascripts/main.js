@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.19");
+console.log("JavaScript: 1.20");
 console.log("CSS: 1.7");
 closeForm();
 var isFavorite = false;
@@ -117,6 +117,8 @@ function loadSpecificNote(id) {
     Save.setAttribute("onclick", "editNote(" + id + "), loadNotes()");
     Delete.setAttribute("onclick", "deleteNote(" + id + ")");
     Favorite.setAttribute("onclick", "addToFavorite(" + id + ")");
+    document.getElementById("Creation").innerHTML = JSONArray[id].created;
+    document.getElementById("Editation").innerHTML = JSONArray[id].edited;
     document.getElementById("help").style.display = "none";
     document.getElementById("notes").style.display = "none";
     document.getElementById("nav").style.display = "none";
@@ -143,7 +145,7 @@ function editNote(id) {
         JSONArray[id].name = document.getElementById("Titel").value;
         JSONArray[id].text = document.getElementById("Notering").value;
         var month = new Date().getMonth() + 1;
-        JSONArray[id].edited = new Date().getFullYear() + "-" + month + "-" + new Date().getDate();
+        JSONArray[id].edited = new Date().getFullYear() + "-" + month + "-" + new Date().getDate() + " " + new Date().getHours() + ":" + new Date().getMinutes();
         saveSNote();
     }   else {
         console.log("you cant change the tutorial!");
