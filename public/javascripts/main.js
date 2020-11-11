@@ -1,6 +1,6 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.15.3");
-console.log("CSS: 1.5.1");
+console.log("JavaScript: 1.16");
+console.log("CSS: 1.6");
 closeForm();
 var JSONString = {
     "name":"Hur man använder appen",
@@ -92,6 +92,13 @@ function editNote(id) {
         JSONArray[id].name = document.getElementById("Titel").value;
         JSONArray[id].text = document.getElementById("Notering").value;
         JSONArray[id].favorite = document.getElementById("Favorite").value
+        if(favorite){
+            img.setAttribute("src", "/images/heartTrue.png");
+        }
+        else{
+            img.setAttribute("src", "/images/heartFalse.png");
+        }
+            
         saveSNote();
     }   else {
         console.log("you cant change the tutorial!");

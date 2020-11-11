@@ -117,6 +117,15 @@ textarea {
   border-bottom: 2px solid #A11075 !important;
 }
 
+.heart{
+  background-image: url(/images/heartFalse.png) !important;
+  background-repeat: no-repeat;
+  background-size: 40px, 40px;
+  width: 40px;
+  height: 40px;
+  background-position-x: center;
+}
+
 @media only screen and (min-width: 600px) {
   .NoteHead {
     font-size: 24px;
