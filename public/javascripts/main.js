@@ -1,6 +1,6 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
 console.log("JavaScript: 1.15.3");
-console.log("CSS: 1.5");
+console.log("CSS: 1.5.1");
 closeForm();
 var JSONString = {
     "name":"Hur man använder appen",
@@ -14,6 +14,7 @@ function openForm() {
     document.getElementById("newNote").style.display = "block";
     document.getElementById("notes").innerHTML = "";
     document.getElementById("help").style.display = "none";
+    document.getElementById("nav").style.display = "none";
 }
 function closeForm() {
     document.getElementById("newNote").style.display = "none";
@@ -30,6 +31,7 @@ function loadNotes(){
     //hide specifik note
     document.getElementById("readNote").style.display = "none";
     document.getElementById("help").style.display = "inline-block";
+    document.getElementById("nav").style.display = "flex";
     //show All Notes
     element.style.display = "grid";
     element.innerHTML = "";
@@ -81,6 +83,7 @@ function loadSpecificNote(id) {
     Delete.setAttribute("onclick", "deleteNote(" + id + ")");
     document.getElementById("help").style.display = "none";
     document.getElementById("notes").style.display = "none";
+    document.getElementById("nav").style.display = "none";
 }
 
 function editNote(id) {
