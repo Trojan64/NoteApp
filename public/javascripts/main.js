@@ -1,6 +1,6 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
 console.log("JavaScript: 1.18.4");
-console.log("CSS: 1.6");
+console.log("CSS: 1.7");
 closeForm();
 var isFavorite = false;
 
@@ -18,6 +18,9 @@ function openForm() {
     document.getElementById("help").style.display = "none";
     document.getElementById("nav").style.display = "none";
     document.getElementById("navTools").style.display = "flex";
+    document.getElementById("Save").style.display = "none";
+    document.getElementById("Checkmark").style.display = "block";
+    document.getElementById("Crossmark").style.display = "block";
     
     isFavorite = false;
 }
@@ -100,6 +103,10 @@ function loadSpecificNote(id) {
     document.getElementById("notes").style.display = "none";
     document.getElementById("nav").style.display = "none";
     document.getElementById("navTools").style.display = "flex";
+    document.getElementById("Save").style.display = "block";
+    document.getElementById("Checkmark").style.display = "none";
+    document.getElementById("Crossmark").style.display = "none";
+
 
     if (JSONArray[id].Favorite){
         document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";
