@@ -198,7 +198,7 @@ textarea {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   body{
     background-image: url(/images/bgNightMode.png) !important;
     background-repeat: repeat;
@@ -217,5 +217,4 @@ textarea {
   .form-control{
     background-color: #1A1B1D !important;
   }
-
-}
+}*/
