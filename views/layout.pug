@@ -15,6 +15,7 @@ html
     div.container
       nav(id="nav").navbar.navbar-expand-sm.fixed-top.nav
         span.navbar-text NoteApp by Trojan64&reg
+        input(id="Switch", onclick="filterByFavorite()", type="submit", value="").float-left
       nav(id="navTools").navbar.navbar-expand-sm.fixed-top.nav.navTools
         div.navSize
           input(id="Save", onclick="closeForm(), loadNotes()", type="submit", value="").returnArrow.float-left

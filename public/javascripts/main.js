@@ -21,6 +21,7 @@ function openForm() {
     document.getElementById("Save").style.display = "none";
     document.getElementById("Checkmark").style.display = "block";
     document.getElementById("Crossmark").style.display = "block";
+    document.getElementById("Delete").style.display = "none";
     
     isFavorite = false;
 }
@@ -140,5 +141,13 @@ function addToFavorite(id){
         isFavorite = true;
         JSONArray[id].favorite = true;
         document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";
+    }
+}
+
+function filterByFavorite(favorite){
+    for (var i = 0; 0< JSONArray.length; i++) {
+        if(JSONArray[i].favorite) {
+            console.log(JSONArray[i])
+        }
     }
 }

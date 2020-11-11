@@ -121,6 +121,7 @@ textarea {
 .btm{
   border: none;
   transition:border 1s !important;
+  margin-top: 10px;
 }
 
 .btm:focus{
