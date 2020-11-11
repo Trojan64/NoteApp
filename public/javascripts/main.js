@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.18.5");
+console.log("JavaScript: 1.19");
 console.log("CSS: 1.7");
 closeForm();
 var isFavorite = false;
@@ -163,10 +163,13 @@ function addToFavorite(id){
     }
 }
 
-function filterByFavorite(favorite){
-    for (var i = 0; 0< JSONArray.length; i++) {
-        if(JSONArray[i].favorite) {
-            console.log(JSONArray[i])
-        }
+function filterByFavorite(){
+    if(all){
+        all = false
+        document.getElementById("Switch").style.backgroundImage="url(/images/heartTrue.png)";
+    } else{
+        all = true
+        document.getElementById("Switch").style.backgroundImage="url(/images/heartFalse.png)";
     }
+
 }
