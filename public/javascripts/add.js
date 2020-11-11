@@ -7,7 +7,7 @@ function addNote() {
             "name": Title.value,
             "text": text.value,
             "id": id,
-            "favorite": false
+            "favorite": isFavorite
         };
     }
     else {
@@ -15,7 +15,7 @@ function addNote() {
             "name": "[UNNAMNED]",
             "text": "",
             "id": id,
-            "favorite": false
+            "favorite": isFavorite
         };
     }
     JSONArray.push(JSONString);
