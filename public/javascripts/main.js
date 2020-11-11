@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.18.0");
+console.log("JavaScript: 1.18.1");
 console.log("CSS: 1.6");
 closeForm();
 var isFavorite = false;
@@ -56,7 +56,11 @@ function loadNotes(){
         if (JSONArray[i].favorite || all) {
         div = document.createElement("div");
         header = document.createElement("p");
-        node = document.createTextNode(JSONArray[i].name);
+        if (JSONArray[i].favorite) {
+            node = document.createTextNode("💗 " + JSONArray[i].name);
+        } else {
+            node = document.createTextNode(JSONArray[i].name);
+        }
         header.appendChild(node);
         header.setAttribute("class", "NoteHead");
         //lägg in i diven
