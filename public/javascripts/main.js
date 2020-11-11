@@ -1,12 +1,12 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.15.2");
+console.log("JavaScript: 1.15.3");
 console.log("CSS: 1.5");
 closeForm();
 var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
     "id": 0,
-    "favorite": true,
+    "favorite": true
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
@@ -44,7 +44,7 @@ function loadNotes(){
     div.setAttribute("class", "addBtnDiv");
     element.appendChild(div);
     //all the notes
-    for (var i = 1; i < JSONArray.length; i++) {
+    for (var i = JSONArray.length - 1; i > 0; i--) {
         if (JSONArray[i].favorite || all) {
         div = document.createElement("div");
         header = document.createElement("p");
