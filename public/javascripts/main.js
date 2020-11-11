@@ -5,7 +5,8 @@ closeForm();
 var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
-    "id": 0
+    "id": 0,
+    "favorite": True,
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
