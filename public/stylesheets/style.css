@@ -11,10 +11,15 @@ body {
 }
 
 
-nav {
+.nav {
   background-color: #EEEEEB;
   font-family: 'Architects Daughter'!important;
   font-weight: bold;
+  display: flex;
+}
+
+.navTools{
+  display: none;
 }
 
 .parent {
