@@ -57,7 +57,7 @@ function loadNotes(){
         div = document.createElement("div");
         header = document.createElement("p");
         if (JSONArray[i].favorite) {
-            node = document.createTextNode("💗 " + JSONArray[i].name);
+            node = document.createTextNode("❤️ " + JSONArray[i].name);
         } else {
             node = document.createTextNode(JSONArray[i].name);
         }
