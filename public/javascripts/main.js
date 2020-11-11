@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.16.1");
+console.log("JavaScript: 1.16.2");
 console.log("CSS: 1.6");
 closeForm();
 
@@ -111,10 +111,12 @@ function editNote(id) {
 
 }
 function addToFavorite(id){
-    if (isFavorite = true){
+    if (isFavorite){
         isFavorite = false;
     }
     else{
         isFavorite = true;
     }
+    console.log(isFavorite);
+
 }
