@@ -6,7 +6,7 @@ var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
     "id": 0,
-    "favorite": true
+    "favorite": true,
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
@@ -70,6 +70,10 @@ function loadSpecificNote(id) {
     console.log("Load note: " + id);
     //show readNotes
     element.style.display = "block";
+    if (id===0) {
+        Save.style.display = "none";
+        Delete.style.display = "none";
+    }
     //Get Values
     Title.value = JSONArray[id].name;
     Note.value = JSONArray[id].text;
