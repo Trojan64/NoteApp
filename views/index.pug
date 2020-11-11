@@ -5,25 +5,22 @@ block content
     div( id="newNote")
       br
       div.btnCenter
-        input(type="submit", value="↩", onclick="closeForm(), loadNotes()").btn.btnn.btnBack
-        input(type="submit", value="Close & Save", onclick="addNote()").btn.btnn
-        input(type="submit", value="View Notes", onclick="closeForm(), loadNotes()").btn.btnn
+        input(type="submit", value="Save", onclick="addNote()").btn.btnn
+        input(type="submit", value="Close", onclick="closeForm(), loadNotes()").btn.btnn
       input(type="text", id="title", name="title", placeholder="Note name", maxlength="25", tabindex="1", required).form-control.btm
       br
-
       textarea(name="note", id="text", cols="22", rows="15", form="newForm", placeholder="Write your note here...").form-control
-      br
-
-      
+      br   
     br 
     div(id="notes").parent
     div(id="readNote")
-        input(Id="Favorite", type="submit")
-        input(id="Titel", type="text", required).form-control.btm
-        br
-        textarea(id="Notering" type="text" rows="15" placeholder="Write your note here...").form-control
-        br
-        div.btnCenter
-          input(id="Save", type="submit", value="Close & Save").btn.btnn
-          input(id="Delete", type="submit", value="Delete note").btn.btnn.bg-danger.btnStand
+      input(Id="Favorite", type="submit")
+      div.btnCenter
+        input(type="submit", value="Return", onclick="closeForm(), loadNotes()").btn.btnn.btnBack
+        input(id="Save", type="submit", value="Close & Save").btn.btnn
+        input(id="Delete", type="submit", value="Delete note").btn.btnn.bg-danger.btnStand
+      input(id="Titel", type="text", required).form-control.btm
+      br
+      textarea(id="Notering" type="text" rows="15" placeholder="Write your note here...").form-control
+      p Date:
   input(type="submit", id="help", value=" ",onclick="loadSpecificNote(0), closeForm()", ).btn.btnn.crcBtn
