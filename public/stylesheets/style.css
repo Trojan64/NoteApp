@@ -52,22 +52,18 @@ a {
   border-radius: 50% !important;
 }
 
-.NoteHead {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 0rem;
-  font-family: 'Bitter' !important;
-  padding: 5px;
-}
-
-.NotePreview {
-  font-size: 16px;
-  margin: 0;
+.btnStand{
+  font-weight: bold !important;
+  border: 2px solid #2A2B2D !important;
 }
 
 .btnCenter {
   text-align: center;
   margin: auto;
+}
+
+.btnBack{
+  font-family: monospace;
 }
 
 .addBtn {
@@ -88,6 +84,19 @@ a {
   padding-top: 5px;
   font-size: 15px;
   color: #A11075;
+}
+
+.NoteHead {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0rem;
+  font-family: 'Bitter' !important;
+  padding: 5px;
+}
+
+.NotePreview {
+  font-size: 16px;
+  margin: 0;
 }
 
 div {
