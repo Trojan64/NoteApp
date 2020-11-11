@@ -17,6 +17,7 @@ function openForm() {
     document.getElementById("notes").innerHTML = "";
     document.getElementById("help").style.display = "none";
     document.getElementById("nav").style.display = "none";
+    document.getElementById("navTools").style.display = "flex";
     
     isFavorite = false;
 }
@@ -36,6 +37,7 @@ function loadNotes(){
     document.getElementById("readNote").style.display = "none";
     document.getElementById("help").style.display = "inline-block";
     document.getElementById("nav").style.display = "flex";
+    document.getElementById("navTools").style.display = "none";
     //show All Notes
     element.style.display = "grid";
     element.innerHTML = "";
@@ -97,6 +99,7 @@ function loadSpecificNote(id) {
     document.getElementById("help").style.display = "none";
     document.getElementById("notes").style.display = "none";
     document.getElementById("nav").style.display = "none";
+    document.getElementById("navTools").style.display = "flex";
 
     if (JSONArray[id].Favorite){
         document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";

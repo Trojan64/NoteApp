@@ -11,10 +11,20 @@ body {
 }
 
 
-nav {
+.nav {
   background-color: #EEEEEB;
   font-family: 'Architects Daughter'!important;
   font-weight: bold;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.navTools{
+  display: none;
+}
+
+.navSize{
+  width:100%;
 }
 
 .parent {
@@ -124,6 +134,36 @@ textarea {
   width: 40px;
   height: 40px;
   background-position-x: center;
+  float: right;
+  border:none;
+  margin: 10px;
+}
+
+.returnArrow{
+  background-image: url(/images/returnarrow.png);
+  background-repeat: no-repeat;
+  background-size: 40px, 40px;
+  width:40px;
+  height:40px;
+  background-position-x: center;
+  border: none;
+  margin:10px;
+} 
+
+.trashCan{
+  background-image: url(/images/trashcan.png);
+  background-repeat: no-repeat;
+  background-size: 40px, 40px;
+  width:40px;
+  height:40px;
+  background-position-x: center;
+  border: none;
+  margin:10px;
+  margin-right: 0;
+}
+
+.trashBackground{
+  background-color: #2A2B2D;
 }
 
 @media only screen and (min-width: 600px) {

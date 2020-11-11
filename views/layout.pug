@@ -2,10 +2,11 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
+    link( rel='stylesheet', href='/stylesheets/style.css')
+    link( href='https://fonts.googleapis.com/css?family=Architects Daughter', rel='stylesheet')
+    link( href='https://fonts.googleapis.com/css?family=Bitter', rel='stylesheet')
     link( rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link( rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     link(rel="icon", type="image/png", href="/favicon.png")
     meta(charset="UTF-8")
     meta( name="author", content="CSS by O. Harrysson")
@@ -14,7 +15,12 @@ html
     div.container
       nav(id="nav").navbar.navbar-expand-sm.fixed-top.nav
         span.navbar-text NoteApp by Trojan64&reg
-      nav(id="navTools").navbar.navbar-expand-sm.fixed-top.navTools
+      nav(id="navTools").navbar.navbar-expand-sm.fixed-top.nav.navTools
+        div.navSize
+          input(id="Save", onclick="closeForm(), loadNotes()", type="submit", value="").returnArrow.float-left
+          input(id="Delete", onclick="", type="submit", value="").trashCan.float-right
+          input(Id="Favorite", type="submit", value="").heart.float-right
+          input(Id="NotFavorite", type="submit", value="").heart.float-right
 
     block content
     
