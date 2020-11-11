@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.18.1");
+console.log("JavaScript: 1.18.4");
 console.log("CSS: 1.6");
 closeForm();
 var isFavorite = false;
