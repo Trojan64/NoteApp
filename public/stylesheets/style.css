@@ -1,5 +1,5 @@
 body {
-  padding: 50px 15px;
+  padding: 50px 15px 0 15px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #F9F9fa;
   color: #2A2B2D !important;
@@ -38,18 +38,19 @@ a {
   margin: 2px;
   transition: 1s !important;
   padding: 0.375rem !important;
+  margin-bottom: 0.5 !important;
 }
 
 .crcBtn{
   position: fixed;
-  bottom: 50px;
+  bottom: 15px;
   background-image: url(/images/help.png);
   background-size: 50px 50px;
   background-repeat: no-repeat;
   background-position: center;
   width: 60px;
   height:60px;
-  border-radius: 50% !important;
+  border-radius: 50% !  important;
 }
 
 .btnStand{
@@ -63,7 +64,7 @@ a {
 }
 
 .btnBack{
-  font-family: monospace;
+  fosnt-family: monospace;
 }
 
 .addBtn {
@@ -132,6 +133,13 @@ textarea {
     grid-template-columns: repeat(auto-fit, minmax(29%, 30%));
     grid-gap: 20px;
     justify-content: center;
+  }
+
+  .crcBtn{
+    bottom: 50px;
+    width:100px;
+    height: 100px;
+    background-size: 85px 85px;
   }
 }
 
