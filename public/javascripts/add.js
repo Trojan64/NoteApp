@@ -12,7 +12,7 @@ function addNote() {
     else {
         var JSONString = {
             "name": "[UNNAMNED]",
-            "text": text,
+            "text": "",
             "id": id
         };
     }
