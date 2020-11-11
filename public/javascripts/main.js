@@ -1,8 +1,7 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.16.2");
+console.log("JavaScript: 1.17.0");
 console.log("CSS: 1.6");
 closeForm();
-
 var isFavorite = false;
 
 var JSONString = {
@@ -76,28 +75,44 @@ function loadSpecificNote(id) {
     var Note = document.getElementById("Notering");
     var Save = document.getElementById("Save");
     var Delete = document.getElementById("Delete");
+    var Favorite = document.getElementById("Favorite");
     console.log("Load note: " + id);
     //show readNotes
     element.style.display = "block";
     if (id===0) {
         Save.style.display = "none";
         Delete.style.display = "none";
+    } else {
+        Save.style.display = "grid";
+        Delete.style.display = "grid";
     }
     //Get Values
     Title.value = JSONArray[id].name;
     Note.value = JSONArray[id].text;
     Save.setAttribute("onclick", "editNote(" + id + "), loadNotes()");
     Delete.setAttribute("onclick", "deleteNote(" + id + ")");
+    Favorite.setAttribute("onclick", "addToFavorite(" + id + ")");
     document.getElementById("help").style.display = "none";
     document.getElementById("notes").style.display = "none";
     document.getElementById("nav").style.display = "none";
     document.getElementById("navTools").style.display = "flex";
 
-    if (isFavorite = true){
+    if (JSONArray[id].Favorite){
         document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";
     }
-    else{
-        document.getElementById("Favorite").style.backgroundImage="url(/images/heartFalse.png)";
+    else {
+         document.getElementById("Favorite").style.backgroundImage="url(/images/heartFalse.png)";
+    }
+    setTimeout(updateFavorite, 1000, id);
+}
+
+function updateFavorite(id) {
+    console.log("updated");
+    if (JSONArray[id].Favorite){
+        document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";
+    }
+    else {
+         document.getElementById("Favorite").style.backgroundImage="url(/images/heartFalse.png)";
     }
 }
 
@@ -114,12 +129,17 @@ function editNote(id) {
 
 }
 function addToFavorite(id){
-    if (isFavorite){
+    if (JSONArray[id].favorite){
         isFavorite = false;
+        JSONArray[id].favorite = false;
+        document.getElementById("Favorite").style.backgroundImage="url(/images/heartFalse.png)";
     }
     else{
         isFavorite = true;
+        JSONArray[id].favorite = true;
+        document.getElementById("Favorite").style.backgroundImage="url(/images/heartTrue.png)";
     }
-    console.log(isFavorite);
+    console.log(JSONArray[id].favorite);
 
 }
+window.onload = loadSpecificNote(0);
