@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.16.2");
+console.log("JavaScript: 1.16.3");
 console.log("CSS: 1.6");
 closeForm();
 
@@ -74,6 +74,7 @@ function loadSpecificNote(id) {
     var Note = document.getElementById("Notering");
     var Save = document.getElementById("Save");
     var Delete = document.getElementById("Delete");
+    var Favorite = document.getElementById("Favorite");
     console.log("Load note: " + id);
     //show readNotes
     element.style.display = "block";
@@ -86,6 +87,7 @@ function loadSpecificNote(id) {
     Note.value = JSONArray[id].text;
     Save.setAttribute("onclick", "editNote(" + id + "), loadNotes()");
     Delete.setAttribute("onclick", "deleteNote(" + id + ")");
+    Favorite.setAttribute("onclick", "addToFavorite(" + id + ")");
     document.getElementById("help").style.display = "none";
     document.getElementById("notes").style.display = "none";
     document.getElementById("nav").style.display = "none";
@@ -111,11 +113,13 @@ function editNote(id) {
 
 }
 function addToFavorite(id){
-    if (isFavorite){
+    if (JSONArray[id].favorite){
         isFavorite = false;
+        JSONArray[id].favorite = false;
     }
     else{
         isFavorite = true;
+        JSONArray[id].favorite = true;
     }
     console.log(isFavorite);
 
