@@ -2,12 +2,16 @@ function addNote() {
     var Title = document.getElementById("title");
     var text = document.getElementById("text");
     var id = JSONArray.length;
+    var month = new Date().getMonth() + 1;
     if (Title.value != "") {
         var JSONString = {
             "name": Title.value,
             "text": text.value,
             "id": id,
-            "favorite": isFavorite
+            "created": new Date().getFullYear() + "-" + month + "-" + new Date().getDate(),
+            "edited": new Date().getFullYear() + "-" + month + "-" + new Date().getDate(),
+            "favorite": isFavorite,
+            "secret_code": Date.now()
         };
     }
     else {
@@ -15,7 +19,10 @@ function addNote() {
             "name": "[UNNAMNED]",
             "text": "",
             "id": id,
-            "favorite": isFavorite
+            "created": new Date().getFullYear() + "-" + month + "-" + new Date().getDate(),
+            "edited": new Date().getFullYear() + "-" + month + "-" + new Date().getDate(),
+            "favorite": isFavorite,
+            "secret_code": Date.now()
         };
     }
     JSONArray.push(JSONString);
