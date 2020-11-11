@@ -6,11 +6,7 @@ var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
     "id": 0,
-<<<<<<< HEAD
     "favorite": true
-=======
-    "favorite": true,
->>>>>>> ba42ae1207c9a5b83c2a3fcd9a304f09f04fc6ef
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
