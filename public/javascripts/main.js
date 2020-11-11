@@ -1,12 +1,16 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.15.1");
+console.log("JavaScript: 1.15.2");
 console.log("CSS: 1.4.1");
 closeForm();
 var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
     "id": 0,
+<<<<<<< HEAD
     "favorite": true
+=======
+    "favorite": true,
+>>>>>>> ba42ae1207c9a5b83c2a3fcd9a304f09f04fc6ef
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
@@ -81,6 +85,7 @@ function editNote(id) {
         console.log("saved nr: " + id);
         JSONArray[id].name = document.getElementById("Titel").value;
         JSONArray[id].text = document.getElementById("Notering").value;
+        JSONArray[id].favorite = document.getElementById("Favorite").value
         saveSNote();
     }   else {
         console.log("you cant change the tutorial!");
