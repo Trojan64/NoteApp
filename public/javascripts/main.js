@@ -5,7 +5,8 @@ closeForm();
 var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
-    "id": 0
+    "id": 0,
+    "favorite": true,
                     };
 var JSONArray = [];
 JSONArray.push(JSONString);
@@ -80,6 +81,7 @@ function editNote(id) {
         console.log("saved nr: " + id);
         JSONArray[id].name = document.getElementById("Titel").value;
         JSONArray[id].text = document.getElementById("Notering").value;
+        JSONArray[id].favorite = document.getElementById("Favorite").value
         saveSNote();
     }   else {
         console.log("you cant change the tutorial!");

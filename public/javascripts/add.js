@@ -6,14 +6,16 @@ function addNote() {
         var JSONString = {
             "name": Title.value,
             "text": text.value,
-            "id": id
+            "id": id,
+            "favorite": false
         };
     }
     else {
         var JSONString = {
             "name": "[UNNAMNED]",
             "text": "",
-            "id": id
+            "id": id,
+            "favorite": false
         };
     }
     JSONArray.push(JSONString);
