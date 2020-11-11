@@ -14,5 +14,8 @@ block content
       input(id="Titel", type="text", required).form-control.btm
       br
       textarea(id="Notering" type="text" rows="15" placeholder="Write your note here...").form-control
-      p Date:
+      p Creation date: 
+        span(id="Creation") 
+      p Edit date:
+        span(id="Editation") 
   input(type="submit", id="help", value=" ",onclick="loadSpecificNote(0), closeForm()", ).btn.btnn.crcBtn
