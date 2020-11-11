@@ -111,7 +111,7 @@ function editNote(id) {
 
 }
 function addToFavorite(id){
-    if (isFavorite = true){
+    if (isFavorite){
         isFavorite = false;
     }
     else{
