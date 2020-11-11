@@ -129,6 +129,31 @@ textarea {
   width: 40px;
   height: 40px;
   background-position-x: center;
+  float: right;
+}
+
+.returnArrow{
+  background-image: url(/images/returnarrow.png);
+  background-repeat: no-repeat;
+  background-size: 40px, 40px;
+  width:40px;
+  height:40px;
+  background-position-x: center;
+  border: none;
+}
+
+.trashCan{
+  background-image: url(/images/trashcan.png);
+  background-repeat: no-repeat;
+  background-size: 40px, 40px;
+  width:40px;
+  height:40px;
+  background-position-x: center;
+  border: none;
+}
+
+.trashBackground{
+  background-color: #2A2B2D;
 }
 
 @media only screen and (min-width: 600px) {

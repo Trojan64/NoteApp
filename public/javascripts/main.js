@@ -18,12 +18,9 @@ function openForm() {
     document.getElementById("notes").innerHTML = "";
     document.getElementById("help").style.display = "none";
     document.getElementById("nav").style.display = "none";
-<<<<<<< HEAD
     document.getElementById("navTools").style.display = "flex";
-=======
     
     isFavorite = false;
->>>>>>> 8b1f89ef39dfdc1a75c320bd1a45328fb863d2cd
 }
 function closeForm() {
     document.getElementById("newNote").style.display = "none";
