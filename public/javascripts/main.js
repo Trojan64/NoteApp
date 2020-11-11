@@ -1,6 +1,6 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
 console.log("JavaScript: 1.15.2");
-console.log("CSS: 1.4.1");
+console.log("CSS: 1.5");
 closeForm();
 var JSONString = {
     "name":"Hur man använder appen",
