@@ -20,6 +20,8 @@ html
           input(id="Save", onclick="closeForm(), loadNotes()", type="submit", value="").returnArrow.float-left
           input(id="Delete", onclick="", type="submit", value="").trashCan.float-right
           input(Id="Favorite", type="submit", value="").heart.float-right
+          input(id="Checkmark", onclick="addNote()", type="submit", value="").checkmark.float-left
+          input(id="Crossmark", onclick="closeForm(), loadNotes()", type="submit", value="").crossmark.float-left
 
     block content
     

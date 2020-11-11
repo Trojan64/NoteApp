@@ -166,6 +166,30 @@ textarea {
   background-color: #2A2B2D;
 }
 
+.checkmark{
+  background-image: url(/images/checkmark.png);
+  background-repeat: no-repeat;
+  background-size: 40px, 40px;
+  width:40px;
+  height:40px;
+  background-position-x: center;
+  border: none;
+  margin:10px;
+  margin-right: 0;
+}
+
+.crossmark{
+  background-image: url(/images/crossmark.png);
+  background-repeat: no-repeat;
+  background-size: 40px, 40px;
+  width:40px;
+  height:40px;
+  background-position-x: center;
+  border: none;
+  margin:10px;
+  margin-right: 0;
+}
+
 @media only screen and (min-width: 600px) {
   .NoteHead {
     font-size: 24px;
