@@ -1,9 +1,9 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.18.4");
+console.log("JavaScript: 1.18.5");
 console.log("CSS: 1.7");
 closeForm();
 var isFavorite = false;
-
+var all = true;     //show all notes or just favorite
 var JSONString = {
     "name":"Hur man använder appen",
     "text":" hur man använder appen \nklicka på noteringen du vill läsa\n",
@@ -33,7 +33,6 @@ function closeForm() {
 
 function loadNotes(){
     //variables
-    var all = true;
     var element = document.getElementById("notes"); //note element
     var div = document.createElement("div");
     var header = document.createElement("p");
@@ -79,7 +78,9 @@ function loadNotes(){
         header.setAttribute("class", "NoteHead");
         //
         created.appendChild(createdNode);
+        created.setAttribute("class", "DateTime created");
         edited.appendChild(editedNode);
+        edited.setAttribute("class", "DateTime edited");
         //lägg in i diven
         div.appendChild(header);
         div.appendChild(created);
@@ -130,7 +131,7 @@ function loadSpecificNote(id) {
     else {
          document.getElementById("Favorite").style.backgroundImage="url(/images/heartFalse.png)";
     }
-
+    //do not question the MACHINE
     addToFavorite(id);
     addToFavorite(id);
 }
