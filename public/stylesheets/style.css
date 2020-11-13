@@ -12,7 +12,7 @@ body {
 
 
 .nav {
-  background-color: #EEEEEB;
+  background-color: #E0DFE1;
   font-family: 'Architects Daughter'!important;
   font-weight: bold;
   display: flex;
@@ -145,6 +145,7 @@ textarea {
   background-image: url(/images/returnarrow.png);
   background-repeat: no-repeat;
   background-size: 40px, 40px;
+  background
   width:40px;
   height:40px;
   background-position-x: center;
@@ -190,6 +191,10 @@ textarea {
   border: none;
   margin:10px;
   margin-right: 0;
+}
+
+.float-right{
+  right: 0 !important;
 }
 
 @media only screen and (min-width: 600px) {
