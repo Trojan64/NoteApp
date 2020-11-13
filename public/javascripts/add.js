@@ -35,4 +35,5 @@ function addNote() {
     closeForm();
     saveSNote();
     loadNotes();
+    saveDataBase(JSONString);
 }

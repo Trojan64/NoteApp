@@ -1,5 +1,5 @@
 console.log("Hej ( ͡° ͜ʖ ͡°)");
-console.log("JavaScript: 1.20");
+console.log("JavaScript: 2.0.a");
 console.log("CSS: 1.7");
 closeForm();
 var isFavorite = false;
@@ -174,4 +174,33 @@ function filterByFavorite(){
         document.getElementById("Switch").style.backgroundImage="url(/images/heartFalse.png)";
     }
 
+}
+
+function loadDataBase() {
+    fetch('/load')
+        .then(response => response.json())
+        .then(data => JSONArray = data);
+}
+
+function saveDataBase(newNote) {
+    //only when creating new note on db
+    //assumedly on /save?name=<name>&text=<text>
+    /*
+        secret_code": "1605109233479",
+    "created": "1970-01-01",
+    "edited": "2030-13-32",
+    "favorite": true
+    */
+    fetch('save?name='+newNote.name+'&text='+newNote.text+'&id='+newNote.secret_code
+    +'&created='+newNote.created+'&edited='+newNote.edited+'&favorite='+newNote.favorite)
+}
+
+function updateDataBase(updatedNote) {
+    //only when updating an existing note on db
+    // on /update?name=<name>&text=<text>
+}
+
+function deleteDatBase(deletedNote) {
+    //only for when deleteing note
+    //on /delete?name=<name>&text=<text>
 }
