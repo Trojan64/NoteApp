@@ -181,7 +181,8 @@ function loadDataBase() {
     fetch('/load')
         .then(response => response.json())
         .then(data => JSONArray = data)
-        .then(loadNotes);
+        //.then(loadNotes)
+        .then(saveSNote);
 }
 
 function updateId() {
@@ -206,6 +207,8 @@ function saveDataBase(newNote) {
 function updateDataBase(updatedNote) {
     //only when updating an existing note on db
     // on /update?name=<name>&text=<text>
+    fetch('save?name='+updatedNote.name+'&text='+updatedNote.text+'&id='+updatedNote.secret_code
+    +'&created='+updatedNote.created+'&edited='+updatedNote.edited+'&favorite='+updatedNote.favorite)
 }
 
 function deleteDatBase(deletedNote) {

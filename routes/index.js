@@ -59,7 +59,33 @@ router.get('/save', function(req, res, next) {
       });
         db.close();
       });
-      res.send("saker");
+      res.send("You will be reported to the police!");
+});
+
+router.get('/update', function(req, res, next) {
+  //querys
+  var name = req.query.name;
+  var text = req.query.text;
+  var id = req.query.id;
+  var edited = req.query.edited;
+  var favorite = req.query.favorite;
+  //db stuff
+  var MongoClient = require('mongodb');
+  var MongoClient = require('mongodb').MongoClient;
+  var url = "mongodb+srv://root:rootboi64!@notebase.lbt2q.mongodb.net/test?retryWrites=true&w=majority";
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+      var dbo = db.db("NoteBase");
+      dbo.collection("Notes").findOneAndUpdate({"id": id}, {
+        "name": name,
+        "text": text,
+        "globalId": id,
+        "edited": edited,
+        "favorite":favorite
+      });
+        db.close();
+      });
+      res.send("You will be reported to the police!");
 });
 
 module.exports = router;
