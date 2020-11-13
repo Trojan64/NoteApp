@@ -3,7 +3,7 @@
     This Code took 10 years to make (or minutes)
     whichever seems reasonable
 */
-window.onload = loadSNote();
+window.onload = loadSNote(), loadDataBase();
 loadNotes();
 function saveSNote() {  //save note to storage
     localStorage.clear;

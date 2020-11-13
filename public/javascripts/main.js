@@ -177,9 +177,17 @@ function filterByFavorite(){
 }
 
 function loadDataBase() {
+    loadNotes();
     fetch('/load')
         .then(response => response.json())
-        .then(data => JSONArray = data);
+        .then(data => JSONArray = data)
+        .then(loadNotes);
+}
+
+function updateId() {
+    for (var i = 0; i < JSONArray.length; i++) {    //Fixar nya id
+        JSONArray[i].id = i;
+    }
 }
 
 function saveDataBase(newNote) {
